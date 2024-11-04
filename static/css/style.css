@@ -436,6 +436,104 @@ body {
     color: #555;
 }
 
+/* Certificate Section */
+.CertificateContainer {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--card-color);
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    border-radius: 8px;
+}
+
+.CertificateHeading p {
+    font-size: 2.5em;
+}
+
+.CertificateHeading,
+.CertificateSubText {
+    margin-bottom: 20px;
+}
+
+.CertificateGridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    place-items: center;
+}
+
+.CertificateCard {
+    background-color: transparent;
+    width: 520px;
+    height: 370px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.CertificateCard img {
+    width: 520px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.CertificateCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.CertificateCard:hover .CertificateCardInner {
+    transform: rotateY(180deg);
+}
+
+.CertificateCardFront,
+.CertificateCardBack {
+    box-shadow: var(--shadow-color);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+
+.CertificateCardFront {
+    background: var(--background-color);
+    color: black;
+}
+
+.CertificateCardBack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-color);
+    color: black;
+    transform: rotateY(180deg);
+    padding: 3px;
+}
+
+.description {
+    width: 390px;
+    text-align: start;
+}
+
 
 /* Contact Me Section */
 .ContactSection {
