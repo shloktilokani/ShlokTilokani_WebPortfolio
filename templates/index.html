@@ -72,9 +72,6 @@
 						nihil?
 					</p>
 				</div>
-				<div class="AboutButton">
-					<button>Download CV</button>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -128,20 +125,22 @@
 		<div class="ExperienceSubText">
 			<p>Here's a glimpse into my professional journey so far.</p>
 		</div>
-		<div class="ExperienceGrid">
+		<div class="ExperienceTimeline">
 			{% for experience in experience_content %}
 			<div class="ExperienceCard">
-				<div class="ExperienceRole">
-					<p>{{ experience['Role'] }}</p>
-				</div>
-				<div class="ExperienceCompany">
-					<p>{{ experience['Company'] }}</p>
-				</div>
-				<div class="ExperienceDuration">
-					<p>{{ experience['Duration'] }}</p>
-				</div>
-				<div class="ExperienceDescription">
-					<p>{{ experience['Description'] }}</p>
+				<div class="ExperienceContent">
+					<div class="ExperienceRole">
+						<p>{{ experience['Role'] }}</p>
+					</div>
+					<div class="ExperienceCompany">
+						<p>{{ experience['Company'] }}</p>
+					</div>
+					<div class="ExperienceDuration">
+						<p>{{ experience['Duration'] }}</p>
+					</div>
+					<div class="ExperienceDescription">
+						<p>{{ experience['Description'] }}</p>
+					</div>
 				</div>
 			</div>
 			{% endfor %}
@@ -188,8 +187,8 @@
 				<a href="/">Contact</a>
 			</div>
 			<div class="FooterSocials">
-				<a href="#"><img src="../images/github.png" alt="GitHub" /></a>
-				<a href="#"><img src="../images/linkedin.png" alt="LinkedIn" /></a>
+				<a href="#"><img src="static/img/github.png" alt="GitHub" /></a>
+				<a href="#"><img src="static/img/linkedin.png" alt="LinkedIn" /></a>
 			</div>
 		</div>
 		<div class="FooterCopyright">

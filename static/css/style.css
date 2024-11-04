@@ -11,6 +11,10 @@
     --hover-color: #f0f0f0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Global Styles */
 * {
     margin: 0;
@@ -114,6 +118,7 @@ body {
     height: 24px;
     cursor: pointer;
     transition: opacity 0.2s ease;
+    margin-left: 10px;
 }
 
 .SocialContainer img:hover {
@@ -264,7 +269,7 @@ body {
     font-family: sans-serif;
 }
 
-.ProjectCard img{
+.ProjectCard img {
     width: 520px;
     height: 320px;
     object-fit: cover;
@@ -362,71 +367,75 @@ body {
 
 /* EXPERIENCE  */
 .ExperienceContainer {
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: var(--card-color);
-    box-shadow: 0px 4px 10px var(--shadow-color);
-    border-radius: 8px;
+    font-family: Arial, sans-serif;
 }
 
-.ExperienceHeading p {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: var(--primary-text-color);
+.ExperienceHeading p{
+    text-align: center;
+    font-size: 2.5em;
 }
 
 .ExperienceSubText p {
-    font-size: 16px;
-    color: var(--secondary-text-color);
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
-.ExperienceGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+/* Timeline Styling */
+.ExperienceTimeline {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 30px;
+    border-left: 3px solid var(--accent-color);
 }
 
 .ExperienceCard {
-    background-color: var(--card-color);
-    border: 1px solid var(--border-color);
+    position: relative;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #f9f9f9;
     border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px var(--shadow-color);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.ExperienceCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px var(--shadow-color);
+.ExperienceCard::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.ExperienceContent p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
 }
 
 .ExperienceRole p {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
-    color: var(--primary-text-color);
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .ExperienceCompany p {
-    font-size: 16px;
-    color: var(--accent-color);
-    margin-bottom: 5px;
+    font-style: italic;
+    color: #666;
 }
 
 .ExperienceDuration p {
-    font-size: 14px;
-    color: var(--secondary-text-color);
-    margin-bottom: 10px;
+    color: #999;
 }
 
 .ExperienceDescription p {
-    font-size: 14px;
-    color: var(--secondary-text-color);
-    line-height: 1.6;
+    color: #555;
 }
+
 
 /* Contact Me Section */
 .ContactSection {
