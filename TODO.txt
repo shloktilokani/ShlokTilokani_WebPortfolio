@@ -1,0 +1,4 @@
+RESPONSIVE:- 
+
+1. Footer Navlink is in Horizontal make it vertical
+2. Project Section card is large in screen resolution 320 px
