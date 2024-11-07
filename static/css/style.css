@@ -48,6 +48,7 @@ body {
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
+    animation: fade_down 1.5s 500ms ease-in-out;
 }
 
 .LogoContainer {
@@ -76,6 +77,12 @@ body {
     background-color: var(--hover-color);
 }
 
+.HamburgerIcon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* Hero Section */
 .HeroSectionContainer {
     display: flex;
@@ -93,7 +100,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     width: 80%;
-    max-width: 1200px;
+    width: 1200px;
     place-items: center;
 }
 
@@ -101,6 +108,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    animation: fade-left 2s 300ms ease-in-out;
 }
 
 .HeroTitleText {
@@ -147,6 +155,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    animation: fade-right 2s 300ms ease-in-out;
 }
 
 /* About Me Section */
@@ -373,7 +382,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.ExperienceHeading p{
+.ExperienceHeading p {
     text-align: center;
     font-size: 2.5em;
 }
@@ -687,4 +696,357 @@ button:hover {
     text-align: center;
     font-size: 14px;
     color: #bbb;
+}
+
+/* Animations */
+
+@keyframes fade_down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .NavContainer {
+        width: 100%;
+    }
+
+    .NavBar {
+        width: 100%;
+    }
+
+    .HeroSectionContainer {
+        width: 100%;
+    }
+
+    .HeroSectionGrid {
+        width: 100%;
+    }
+
+    .HeroTitleText h2 {
+        font-size: 16px;
+        color: var(--secondary-text-color);
+    }
+
+    .HeroHeader h1 {
+        font-size: larger;
+    }
+
+    .HeroImage {
+        width: 350px;
+        height: 350px;
+    }
+
+    .AboutMeContainer {
+        width: 100%;
+    }
+
+    .AboutMeGridContainer {
+        width: 100%;
+    }
+
+    .AboutMeImageContainer {
+        width: 350px;
+        height: 350px;
+    }
+
+    .AboutMeTitleText {
+        font-size: 16px;
+        color: var(--secondary-text-color);
+    }
+
+    .AboutMeHeader {
+        font-size: larger;
+    }
+
+    .AboutSubText {
+        font-size: medium;
+    }
+
+    .ProjectContainer {
+        width: 100%;
+    }
+
+    .ProjectGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        place-items: center;
+    }
+
+    .CertificateContainer {
+        width: 100%;
+    }
+
+    .CertificateGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .LinkContainer {
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        padding: 0;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: max-height 0.3s ease-in-out;
+    }
+    .LinkContainer a {
+        padding: 10px 0;
+        display: block;
+        text-align: center;
+    }
+    .HamburgerIcon {
+        display: block;
+    }
+    .HamburgerIcon img{
+        width: 25px;
+        height: 25px;
+    }
+    .LinkContainer.show {
+        max-height: 300px; 
+        padding: 10px;
+    }
+    .LogoContainer p {
+        font-size: 16px;
+    }
+    .LinkContainer a {
+        font-size: 16px;
+        padding: 5px 8px;
+    }
+
+    .HeroSectionContainer {
+        width: 100%;
+    }
+
+    .HeroSectionGrid {
+        width: 100%;
+    }
+
+    .HeroTitleText h2 {
+        font-size: 16px;
+        color: var(--secondary-text-color);
+    }
+
+    .HeroHeader h1 {
+        font-size: 36px;
+    }
+
+    .HeroImage {
+        width: 320px;
+        height: 320px;
+    }
+
+    .AboutMeContainer {
+        width: 100%;
+    }
+
+    .AboutMeGridContainer {
+        width: 100%;
+    }
+
+    .AboutMeImageContainer {
+        width: 320px;
+        height: 320px;
+    }
+
+    .AboutMeTitleText {
+        font-size: 16px;
+        color: var(--secondary-text-color);
+    }
+
+    .AboutMeHeader {
+        font-size: large;
+    }
+
+    .AboutSubText {
+        font-size: medium;
+    }
+
+    .ProjectContainer {
+        width: 100%;
+    }
+
+    .ProjectGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        place-items: center;
+    }
+
+    .CertificateContainer {
+        width: 100%;
+    }
+
+    .CertificateGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .HeroSectionContainer {
+        width: 100%;
+    }
+
+    .HeroSectionGrid {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .HeroText{
+        text-align: center;
+    }
+
+    .HeroTitleText h2 {
+        font-size: 14px;
+        color: var(--secondary-text-color);
+    }
+
+    .HeroHeader h1 {
+        font-size: larger;
+    }
+
+    .HeroImage {
+        width: 250px;
+        height: 250px;
+    }
+    .HeroButton{
+        display: none;
+    }
+    .SocialContainer img{
+        width: 22px;
+        height: 22px;
+    }
+
+    .AboutMeContainer {
+        width: 100%;
+    }
+
+    .AboutMeGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .AboutMeImageContainer {
+        width: 250px;
+        height: 250px;
+    }
+
+    .AboutMeTitleText {
+        font-size: 16px;
+        color: var(--secondary-text-color);
+    }
+
+    .AboutMeHeader {
+        font-size: larger;
+    }
+
+    .AboutSubText {
+        font-size: medium;
+    }
+
+    .ProjectContainer {
+        width: 100%;
+    }
+
+    .ProjectGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        place-items: center;
+    }
+
+    .ProjectCard{
+        width: 350px;
+        height: 350px;
+    }
+
+    .ProjectCard img{
+        width: 350px;
+        height: 300px;
+    }
+
+    .description{
+        width: 290px;
+    }
+
+    .ProjectCardBack img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .CertificateContainer {
+        width: 100%;
+    }
+
+    .CertificateGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        place-items: center;
+    }
+    
+    .CertificateCard{
+        width: 350px;
+        height: 350px;
+    }
+
+    .CertificateCard img{
+        width: 350px;
+        height: 350px;
+    }
+
+    .description{
+        width: 290px;
+    }
 }

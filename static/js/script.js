@@ -1,3 +1,8 @@
+// Toggle Hamburger menu
+function toggleMenu() {
+    document.getElementById("LinkContainer").classList.toggle("show");
+}
+
 // Select all filter buttons and project cards
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.ProjectCard');

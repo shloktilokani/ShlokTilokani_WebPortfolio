@@ -27,23 +27,33 @@
 			</nav>
 		</header>
 
-		<!-- Hero Section -->
-		<div class="HeroSectionContainer" id="HeroContainer">
-			<div class="HeroSectionGrid">
-				<div class="HeroText">
-					<div class="HeroTitleText">
-						<h2>Hi, My name is</h2>
-					</div>
-					<div class="HeroHeader">
-						<h1>Shlok Tilokani</h1>
-					</div>
-					<div class="SocialContainer">
-						<i><img src="../static/img/github.png" alt="github" /></i>
-						<i><img src="../static/img/linkedin.png" alt="linkedin" /></i>
-					</div>
-					<div class="HeroButton">
-						<button>View My Work</button>
-					</div>
+<body>
+	<!-- Navbar -->
+	<header class="NavContainer" id="NavBar">
+		<nav class="NavBar">
+			<div class="LogoContainer">
+				<p>Shlok <span>Tilokani</span></p>
+			</div>
+			<div class="HamburgerIcon" id="HamburgerIcon" onclick="toggleMenu()">
+				<img src="../static/img/hamburger.png" />
+			</div>
+			<div class="LinkContainer" id="LinkContainer">
+				<a href="#AboutMeContainer">About</a>
+				<a href="#ProjectContainer">Projects</a>
+				<a href="#ExperienceContainer">Experience</a>
+				<a href="#CertificateContainer">Certificates</a>
+				<a href="#ContactContainer">Contact Me</a>
+			</div>
+		</nav>
+	</header>
+	
+
+	<!-- Hero Section -->
+	<div class="HeroSectionContainer" id="HeroContainer">
+		<div class="HeroSectionGrid">
+			<div class="HeroText">
+				<div class="HeroTitleText">
+					<h2>Hey there I'm,</h2>
 				</div>
 				<div class="HeroImage">
 					<img src="static/img/formalCirclebw.png" alt="HeroImage" />
@@ -60,9 +70,26 @@
 				<div class="AboutMeImageContainer">
 					<img src="../static/img/formalCircleBw.png" alt="about image" />
 				</div>
-				<div class="AboutMeContentContainer">
-					<div class="AboutMeTitleText">
-						<p>My Resume</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<!-- Certificate Section -->
+	<div id="CertificateContainer" class="CertificateContainer">
+		<div class="CertificateHeading">
+			<p>My Achievements</p>
+		</div>
+		<div class="CertificacteSubText">
+			<p>Here are some of achievements I achieved so far.</p>
+		</div>
+
+		<div class="CertificateGridContainer">
+			<div class="CertificateCard" data-category="add about certificates">
+				<div class="CertificateCardInner">
+					<div class="CertificateCardFront">
+						<img src="https://4.imimg.com/data4/JE/XJ/MY-6362665/certificate.jpg" alt="Certificate Image"
+							class="CertificateImage" />
 					</div>
 					<div class="AboutMeHeader">
 						<h1>Education, Skills, and Experience</h1>
@@ -74,6 +101,21 @@
 							Nobis vel totam illo eos animi fugiat est. Hic porro quam dolore
 							quasi nihil?
 						</p>
+				</div>
+			</div>
+
+			<div class="CertificateCard" data-category="add about certificates">
+				<div class="CertificateCardInner">
+					<div class="CertificateCardFront">
+						<img src="https://media.istockphoto.com/id/1312924009/vector/professional-certificate-of-appreciation-golden-template-design.jpg?s=612x612&w=0&k=20&c=lM4Xf0JoWggAkuzw7youwvJBjw7hQUC2XZ9jF8vpLBk="
+							alt="Certificate Image" class="CertificateImage" />
+					</div>
+					<div class="CertificateCardBack">
+						<p class="title">IOT certificate</p>
+						<p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo eum,
+							omnis, sequi sit laboriosam dicta consequatur officia provident vel eius ipsum? Harum aut
+							deserunt quisquam mollitia. Voluptatum, ipsa! Unde, beatae!</p>
+						<hr />
 					</div>
 				</div>
 			</div>
