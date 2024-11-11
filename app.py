@@ -13,7 +13,7 @@ def load_experience_data(folder_path):
         with open(file_path, "r") as file:
             data = json.load(file)
             data_list.append(data)
-    return data_list
+    return data_list[::-1]
 
 
 def load_project_data(projects_folder):
@@ -55,7 +55,7 @@ def load_certificate_data(certificates_folder):
                     data = json.load(file)
                     data["image"] = image_path or "/static/images/default.jpg"
                     certificate_data.append(data)
-    return certificate_data
+    return certificate_data[::-1]
 
 
 def find_image_file(folder_path):
