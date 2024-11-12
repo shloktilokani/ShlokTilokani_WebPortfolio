@@ -1,9 +1,5 @@
 RESPONSIVE:- 
 
-1. Footer Navlink is in Horizontal make it vertical
-2. Project Section card is large in screen resolution 320 px
-3. Project Section card fit to width in mobile view
-4. Navbar Hide and Hover
-5. Hamburger sticky
-6. Remove Subject From Contact From
-7. Contact Form Backend
+1. Contact Form Backend
+2. Image croping
+3. Content overflowing(Read More button all the views)
