@@ -1,3 +1,24 @@
+// Navbar showing and not showing on scroll
+document.addEventListener("DOMContentLoaded", function() {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector(".NavContainer");
+
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 80) {
+            // Scrolling down and scrolled past 80px
+            navbar.classList.add("hidden");
+        } else if (scrollTop < lastScrollTop) {
+            // Scrolling up
+            navbar.classList.remove("hidden");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Reset on top
+    });
+});
+
+
 // Toggle Hamburger menu
 function toggleMenu() {
     document.getElementById("LinkContainer").classList.toggle("show");
