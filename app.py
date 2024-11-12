@@ -37,7 +37,7 @@ def load_project_data(projects_folder):
                     category = data.get("category", "Uncategorized")
                     unique_categories.add(category)
 
-    return project_data, sorted(unique_categories)
+    return project_data[::-1], sorted(unique_categories)
 
 
 def load_certificate_data(certificates_folder):
