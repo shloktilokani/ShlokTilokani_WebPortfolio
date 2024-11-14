@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 // Toggle Hamburger menu
 function toggleMenu() {
     document.getElementById("LinkContainer").classList.toggle("show");
@@ -50,5 +49,18 @@ filterButtons.forEach(button => {
         // Get the category from the clicked button and filter projects
         const category = button.getAttribute('data-category');
         filterProjects(category);
+    });
+});
+
+// Make content small
+document.addEventListener("DOMContentLoaded", function() {
+    const descriptionElements = document.getElementsByClassName("description");
+    
+    Array.from(descriptionElements).forEach(descriptionElement => {
+        const originalText = descriptionElement.textContent;
+
+        if (originalText.length > 100) {
+            descriptionElement.innerHTML = originalText.substring(0, 100) + '<strong>....Read More</strong>';
+        }
     });
 });

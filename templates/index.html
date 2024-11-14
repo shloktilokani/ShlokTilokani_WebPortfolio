@@ -128,6 +128,7 @@
 						</div>
 						<div class="ProjectCardBack">
 							<p class="title">{{ project['title'] }}</p>
+							<!-- Use class instead of id -->
 							<p class="description">{{ project['description'] }}</p>
 							<hr />
 							<a href="{{ project['github_link'] }}" class="github-link">
@@ -137,7 +138,7 @@
 					</div>
 				</div>
 				{% endfor %}
-			</div>
+			</div>			
 		</div>
 
 		<!-- Experience Section -->
