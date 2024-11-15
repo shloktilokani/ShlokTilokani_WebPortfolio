@@ -1,6 +1,1 @@
-RESPONSIVE:- 
-
-1. Contact Form Backend
-2. Image croping
-3. Content overflowing(Read More button all the views)
-4. Image size Hero section reduce to create gap from nav bar.
+Completed......
