@@ -1,7 +1,4 @@
-PassengerEnabled on
-PassengerAppRoot /home2/shloktilokani/flask_app
-PassengerPython /home2/shloktilokani/flask_app/venv/Scripts/python
-
-AddHandler wsgi-script .wsgi
+AddHandler cgi-script .py
+Options +ExecCGI
 RewriteEngine On
-RewriteRule ^(.*)$ flask_app.wsgi [L]
+RewriteRule ^$ /home2/shloktilokani/shlok_web_portfolio/app.py [L]
