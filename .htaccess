@@ -1,0 +1,7 @@
+PassengerEnabled on
+PassengerAppRoot /home2/shloktilokani/flask_app
+PassengerPython /home2/shloktilokani/flask_app/venv/Scripts/python
+
+AddHandler wsgi-script .wsgi
+RewriteEngine On
+RewriteRule ^(.*)$ flask_app.wsgi [L]

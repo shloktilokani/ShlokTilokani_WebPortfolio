@@ -1,6 +1,0 @@
-Open cmd in root folder `pythonProject`
-Navigate to `pythonProject/venv/Scripts`
-Run `activate` file
-Run `pip install -r requirements.txt`
-Navigate to `pythonProject/app`
-Run `py app.py`
