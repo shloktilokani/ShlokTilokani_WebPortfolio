@@ -1,4 +1,4 @@
-AddHandler cgi-script .py
-Options +ExecCGI
-RewriteEngine On
-RewriteRule ^$ /home2/shloktilokani/shlok_web_portfolio/app.py [L]
+PassengerEnabled on
+PassengerAppRoot /home2/shloktilokani/repositories/ShlokTilokaniWebPortfolio
+PassengerAppType wsgi
+PassengerStartupFile wsgi.py

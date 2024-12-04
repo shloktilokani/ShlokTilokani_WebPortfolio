@@ -1,0 +1,4 @@
+{
+  "app_type": "Python",
+  "startup_file": "wsgi.py"
+}
