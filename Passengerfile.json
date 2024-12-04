@@ -1,4 +1,4 @@
 {
-  "app_type": "Python",
+  "app_type": "python",
   "startup_file": "wsgi.py"
 }
